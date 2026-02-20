@@ -1,0 +1,14 @@
+/* =============================================================
+   pages/dashboard.css – Dashboard Page Specific Styles
+   ============================================================= */
+
+/*
+  Most dashboard styles live in components/cards.css and
+  components/table.css. This file is reserved for any page-level
+  overrides or layout compositions unique to the dashboard.
+*/
+
+/* ── Dashboard section spacing ── */
+.dashboard-section+.dashboard-section {
+    margin-top: 28px;
+}

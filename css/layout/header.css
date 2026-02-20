@@ -1,0 +1,158 @@
+/* =============================================================
+   layout/header.css – Top Header Bar
+   ============================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ── Page title ── */
+.header__title {
+    flex: 1;
+}
+
+.header__heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    line-height: 1.2;
+}
+
+/* ── Hamburger (mobile only) ── */
+.header__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition);
+}
+
+.header__hamburger:hover {
+    background: var(--clr-bg);
+}
+
+.header__hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--clr-text);
+    border-radius: 2px;
+    transition: transform var(--transition);
+}
+
+/* ── Right controls group ── */
+.header__controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── Search ── */
+.header__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    padding: 8px 14px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.header__search:focus-within {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px var(--clr-primary-alpha);
+}
+
+.header__search svg {
+    color: var(--clr-text-muted);
+    flex-shrink: 0;
+}
+
+.header__search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 180px;
+    color: var(--clr-text);
+    font-size: 0.875rem;
+}
+
+.header__search-input::placeholder {
+    color: var(--clr-text-muted);
+}
+
+/* ── Notification icon button ── */
+.header__icon-btn {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--clr-border);
+    border-radius: 50%;
+    background: var(--clr-surface);
+    color: var(--clr-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition), color var(--transition);
+}
+
+.header__icon-btn:hover {
+    background: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+.header__badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    background: var(--clr-danger);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--clr-surface);
+    line-height: 1;
+}
+
+/* ── User avatar ── */
+.header__avatar {
+    border: none;
+    background: none;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    transition: box-shadow var(--transition);
+}
+
+.header__avatar:hover {
+    box-shadow: 0 0 0 3px var(--clr-primary-alpha);
+}
+
+.header__avatar img {
+    border-radius: 50%;
+}

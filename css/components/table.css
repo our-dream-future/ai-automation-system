@@ -1,0 +1,174 @@
+/* =============================================================
+   components/table.css – Recent Activity Table
+   ============================================================= */
+
+.activity-section {
+    margin-bottom: 28px;
+}
+
+/* ── Scroll wrapper (handles overflow on small screens) ── */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ── Table ── */
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.activity-table thead {
+    background: var(--clr-bg);
+}
+
+.activity-table th {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+}
+
+.activity-table tbody tr {
+    border-top: 1px solid var(--clr-border);
+    transition: background var(--transition);
+}
+
+.activity-table tbody tr:hover {
+    background: rgba(79, 70, 229, 0.03);
+}
+
+.activity-table td {
+    padding: 14px 20px;
+    color: var(--clr-text);
+    vertical-align: middle;
+}
+
+.td-title {
+    font-weight: 500;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Content-type badges ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge--blog {
+    background: var(--clr-info-bg);
+    color: var(--clr-info);
+}
+
+.badge--video {
+    background: var(--clr-violet-bg);
+    color: var(--clr-violet);
+}
+
+.badge--article {
+    background: var(--clr-success-bg);
+    color: var(--clr-success);
+}
+
+.badge--email {
+    background: var(--clr-warning-bg);
+    color: var(--clr-warning);
+}
+
+/* ── Status pills ── */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status--success {
+    background: var(--clr-success-bg);
+    color: var(--clr-success);
+}
+
+.status--success::before {
+    background: var(--clr-success);
+}
+
+.status--failed {
+    background: var(--clr-danger-bg);
+    color: var(--clr-danger);
+}
+
+.status--failed::before {
+    background: var(--clr-danger);
+}
+
+.status--running {
+    background: var(--clr-info-bg);
+    color: var(--clr-info);
+    animation: pulse 1.6s infinite;
+}
+
+.status--running::before {
+    background: var(--clr-info);
+}
+
+.status--pending {
+    background: var(--clr-warning-bg);
+    color: var(--clr-warning);
+}
+
+.status--pending::before {
+    background: var(--clr-warning);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ── Row action link ── */
+.table-action {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    padding: 5px 12px;
+    border: 1px solid var(--clr-primary-alpha);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition);
+}
+
+.table-action:hover {
+    background: var(--clr-primary-alpha);
+    color: var(--clr-primary-dark);
+}

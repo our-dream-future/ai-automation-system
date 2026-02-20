@@ -1,0 +1,93 @@
+/* =============================================================
+   responsive.css – All Breakpoint Overrides (Mobile-First)
+   ============================================================= */
+
+/* ── Tablet: collapse 4-col stats to 2-col ── */
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Mobile: ≤ 768 px ── */
+@media (max-width: 768px) {
+
+    /* Sidebar slides off-screen */
+    .sidebar {
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* Main wrapper fills full viewport width */
+    .main-wrapper {
+        margin-left: 0;
+    }
+
+    /* Show hamburger */
+    .header__hamburger {
+        display: flex;
+    }
+
+    /* Header padding */
+    .header {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    /* Hide search bar to save space */
+    .header__search {
+        display: none;
+    }
+
+    /* Content padding */
+    .content {
+        padding: 20px 16px;
+    }
+
+    /* 2-column stats */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .stat-card__value {
+        font-size: 1.6rem;
+    }
+
+    /* Single-column form row */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack action buttons */
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ── Small mobile: ≤ 480 px ── */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header__heading {
+        font-size: 1rem;
+    }
+
+    /* Hide "Created" column on narrow screens */
+    .activity-table th:nth-child(4),
+    .activity-table td:nth-child(4) {
+        display: none;
+    }
+}

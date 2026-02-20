@@ -1,0 +1,61 @@
+/* =============================================================
+   variables.css – Design Tokens (CSS Custom Properties)
+   All global design decisions live here.
+   ============================================================= */
+
+:root {
+    /* ── Brand palette ── */
+    --clr-primary: #4f46e5;
+    --clr-primary-light: #7c73f1;
+    --clr-primary-dark: #3730a3;
+    --clr-primary-alpha: rgba(79, 70, 229, 0.12);
+
+    /* ── Semantic colours ── */
+    --clr-success: #10b981;
+    --clr-success-bg: rgba(16, 185, 129, 0.10);
+    --clr-warning: #f59e0b;
+    --clr-warning-bg: rgba(245, 158, 11, 0.10);
+    --clr-danger: #ef4444;
+    --clr-danger-bg: rgba(239, 68, 68, 0.10);
+    --clr-info: #3b82f6;
+    --clr-info-bg: rgba(59, 130, 246, 0.10);
+    --clr-violet: #8b5cf6;
+    --clr-violet-bg: rgba(139, 92, 246, 0.10);
+
+    /* ── Neutrals ── */
+    --clr-bg: #f4f6f9;
+    --clr-surface: #ffffff;
+    --clr-border: #e5e7eb;
+    --clr-text: #111827;
+    --clr-text-secondary: #6b7280;
+    --clr-text-muted: #9ca3af;
+
+    /* ── Sidebar ── */
+    --sidebar-width: 240px;
+    --sidebar-bg: #1e1b4b;
+    --sidebar-text: rgba(255, 255, 255, 0.70);
+    --sidebar-text-hover: #ffffff;
+    --sidebar-active-bg: rgba(255, 255, 255, 0.12);
+
+    /* ── Header ── */
+    --header-height: 64px;
+    --header-bg: #ffffff;
+
+    /* ── Shadows ── */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+    /* ── Shape ── */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+
+    /* ── Typography ── */
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* ── Motion ── */
+    --transition: 200ms ease;
+    --transition-slow: 350ms ease;
+}

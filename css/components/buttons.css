@@ -1,0 +1,58 @@
+/* =============================================================
+   components/buttons.css – Button Variants
+   ============================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    border-radius: var(--radius-md);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+    white-space: nowrap;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Primary ── */
+.btn--primary {
+    background: var(--clr-primary);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+
+.btn--primary:hover {
+    background: var(--clr-primary-dark);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+    transform: translateY(-1px);
+}
+
+/* ── Secondary ── */
+.btn--secondary {
+    background: var(--clr-surface);
+    color: var(--clr-text-secondary);
+    border-color: var(--clr-border);
+}
+
+.btn--secondary:hover {
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    border-color: #cbd5e1;
+}
+
+/* ── Loading state ── */
+.btn--loading {
+    opacity: 0.75;
+    pointer-events: none;
+}

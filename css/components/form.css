@@ -1,0 +1,124 @@
+/* =============================================================
+   components/form.css – Create Content Form
+   ============================================================= */
+
+/* ── Form layout ── */
+.create-card {
+    max-width: 780px;
+}
+
+.create-form {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ── Labels ── */
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--clr-text);
+}
+
+.form-label__required {
+    color: var(--clr-danger);
+    margin-left: 2px;
+}
+
+.form-hint {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    margin-top: 2px;
+}
+
+/* ── Shared input / textarea / select base ── */
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    background: var(--clr-surface);
+    color: var(--clr-text);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--clr-text-muted);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+    border-color: #c7c4f5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3.5px var(--clr-primary-alpha);
+    background: #fafafe;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ── Custom select (hide native arrow, add SVG) ── */
+.form-select-wrapper {
+    position: relative;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.form-select:hover {
+    border-color: #c7c4f5;
+}
+
+.form-select:focus {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3.5px var(--clr-primary-alpha);
+}
+
+.form-select-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--clr-text-muted);
+    pointer-events: none;
+}
+
+/* ── Actions row ── */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 4px;
+}

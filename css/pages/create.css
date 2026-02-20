@@ -1,0 +1,14 @@
+/* =============================================================
+   pages/create.css – Create Content Page Specific Styles
+   ============================================================= */
+
+/*
+  Most create-content styles live in components/form.css and
+  components/buttons.css. This file is reserved for page-level
+  overrides or additions unique to the create content view.
+*/
+
+/* ── Constrain card width on wider screens ── */
+#page-create .card {
+    max-width: 780px;
+}

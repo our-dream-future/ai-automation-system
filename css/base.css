@@ -1,0 +1,98 @@
+/* =============================================================
+   base.css – Global Reset, Typography & Utilities
+   ============================================================= */
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    /* 15 px */
+    line-height: 1.6;
+    color: var(--clr-text);
+    background-color: var(--clr-bg);
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+}
+
+/* ── Scrollbar (Webkit) ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* ── Focus visible (Accessibility) ── */
+:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+}
+
+/* ── Utility: screen-reader only ── */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ── Utility: hide page ── */
+.content--hidden {
+    display: none !important;
+}
